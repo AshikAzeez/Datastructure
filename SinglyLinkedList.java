@@ -15,24 +15,18 @@ class SinglyLinkedList {
 
     public static void main(String[] args) {
         //Add value into head
-        head = new ListNode<>();
-        head.data = 10;
+        head = new ListNode<>(10);
 
         //Second list node created
-        ListNode<Integer> second = new ListNode<>();
-        second.data = 20;
-        second.next = null;
-        head.next = second; //set value for Head next
+        ListNode<Integer> second = new ListNode<>(20);
+        second.data = 20;//set value for Head next
+        head.next = second; 
 
         //Third list node
-        ListNode<Integer> third = new ListNode<>();
-        third.data = 30;
+        ListNode<Integer> third = new ListNode<>(30,null);
         second.next = third;
-        third.next = null;
 
-        ListNode<Integer> fourth = new ListNode<>();
-        fourth.data = 40;
-        fourth.next = null;
+        ListNode<Integer> fourth = new ListNode<>(40,null);
         third.next = fourth;
 
         printOnlyTheDataFromListNode();
